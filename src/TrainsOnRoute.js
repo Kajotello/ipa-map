@@ -70,7 +70,11 @@ export function TrainsOnRoute(props) {
                 <TextField
                     sx={{ ml: 5, mt: 5 }}
                     label="Szybkość"
-                    onChange={(e) => props.setStep(parseInt(e.target.value))}
+                    onChange={(e) => {
+                        if (e.target.value) {
+                            props.setStep(parseInt(e.target.value))
+                        }
+                    }}
                     value={props.currentStep}
                 >
                     Prędkość

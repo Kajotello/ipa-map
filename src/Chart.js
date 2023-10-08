@@ -53,12 +53,15 @@ ChartJS.register(
 let data = { datasets: [] }
 
 for (let key in dataset) {
+    var color
+    if (dataset[key].type === 'IC') color = 'rgb(255,0,0)'
+    else color = 'rgb(0,0,0)'
     //let color = `rgb(${parseInt(Math.random()*255)}, ${parseInt(Math.random()*255)}, ${parseInt(Math.random()*255)})`
     data.datasets.push({
         label: key,
-        data: dataset[key],
-        borderColor: 'rgb(0,0,0)',
-        backgroundColor: 'rgb(0,0,0)',
+        data: dataset[key].data,
+        borderColor: color,
+        backgroundColor: color,
     })
 }
 
