@@ -13,7 +13,7 @@ import {
     Legend,
     TimeScale,
 } from 'chart.js'
-import { Chart, Line } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 import dataset from './rsc/chart354.json'
 import 'chartjs-adapter-moment'
 import { getRelativePosition } from 'chart.js/helpers'
@@ -63,7 +63,7 @@ for (let key in dataset) {
 }
 
 export function MyChart(props) {
-    const [chartRef, setChartRef] = useState(React.createRef())
+    const [chartRef] = useState(React.createRef())
 
     const [options, setOptions] = useState({
         responsive: true,
@@ -135,7 +135,7 @@ export function MyChart(props) {
                 3
             return prevOptions
         })
-    }, [props.currentTime])
+    }, [props.currentTime, chartRef])
 
     const onClick = (event) => {
         const canvasPosition = getRelativePosition(event, chartRef.current)

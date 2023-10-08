@@ -103,10 +103,10 @@ function App() {
         return
     }
 
-    function handleResetClick() {
-        setTime(0)
-        setTrainsOnTrack({})
-    }
+    // function handleResetClick() {
+    //     setTime(0)
+    //     setTrainsOnTrack({})
+    // }
 
     function goToTime(selectedTime) {
         setTrainsOnTrack({})
