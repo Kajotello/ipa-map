@@ -10,8 +10,7 @@ import {
     LineElement,
     Title,
     Tooltip,
-    Legend,
-    TimeScale,
+    Legend
 } from 'chart.js'
 import { Chart, Line } from 'react-chartjs-2'
 import dataset from './rsc/chart354.json'

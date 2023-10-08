@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { MapContainer, TileLayer, Popup, GeoJSON, Marker } from 'react-leaflet'
 import './Map.css'
 import data from './rsc/line354.json'

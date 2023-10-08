@@ -5,7 +5,6 @@ import { createTheme, Grid, ThemeProvider } from '@mui/material'
 import { TrainsOnRoute } from './TrainsOnRoute'
 import { useRef, useState } from 'react'
 import { ToolBar } from './Toolbar'
-import { RouteStatistics } from './RouteStatistics'
 import simulationData from './rsc/simulation354.json'
 
 function App() {
@@ -121,7 +120,7 @@ function App() {
                 isRunning={clock ? true : false}
                 actionOnStopClick={handleStopClick}
             ></ToolBar>
-            {/* <Grid
+            <Grid
                 container
                 spacing={1}
             >
@@ -159,8 +158,7 @@ function App() {
                         </Grid>
                     </Grid>
                 </Grid>
-            </Grid> */}
-            <RouteStatistics></RouteStatistics>
+            </Grid>
         </ThemeProvider>
     )
 }
